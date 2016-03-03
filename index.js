@@ -1,12 +1,10 @@
 var express = require('express');
 var app = express();
-
+var path = require("path");
 var fs = require('fs');
 
-//fs.writeFileSync('/tmp/personal.pid', `${process.pid}`);
-
 app.get('/', function (req, res) {
-  res.send('Hello World');
+  res.sendFile(path.join(__dirname, '/index.html'));
 });
 
 app.listen(9000, function () {
