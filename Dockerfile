@@ -4,13 +4,15 @@ RUN mkdir -p /site
 
 WORKDIR /site
 
-COPY . /site
+# COPY . /site
+
+COPY ./config /site
 
 RUN npm install
 
 RUN npm install -g forever
 
-# COPY . /site
+COPY . /site
 
 EXPOSE 9000
 
