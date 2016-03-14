@@ -1,17 +1,17 @@
 FROM node:5.8.0
 
-RUN mkdir /var/site
+RUN mkdir /site
 
-WORKDIR /var/site
+WORKDIR /site
 
-COPY package.json /var/site
+COPY package.json /site
 
 RUN npm install
 
 RUN npm install -g forever
 
-COPY . /var/site
+COPY . /site
 
 EXPOSE 9000
 
-CMD ["forever", "restart", "/var/site/index.js", "||", "forever", "start", "/var/site/index.js"]
+CMD ["forever", "restart", "/site/index.js", "||", "forever", "start", "/site/index.js"]
