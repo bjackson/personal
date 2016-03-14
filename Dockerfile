@@ -14,4 +14,4 @@ RUN npm install -g forever
 
 EXPOSE 9000
 
-CMD /usr/local/bin/forever restart -c /site/index.js || /usr/local/bin/forever start -c /site/index.js
+CMD /usr/local/bin/forever -c node /site/index.js
