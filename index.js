@@ -4,6 +4,7 @@ var path = require("path");
 var fs = require('fs');
 
 app.get('/', function (req, res) {
+  console.log('New visitor.');
   res.sendFile(path.join(__dirname, '/index.html'));
 });
 
