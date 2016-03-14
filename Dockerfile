@@ -6,7 +6,7 @@ WORKDIR /site
 
 # COPY . /site
 
-COPY ./config /site
+COPY ./package.json /site
 
 RUN npm install
 
