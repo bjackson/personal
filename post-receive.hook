@@ -1,0 +1,11 @@
+#!/bin/sh
+git --work-tree=/sites/personal --git-dir=/repo/personal.git checkout -f
+
+docker kill personal
+docker rm personal
+cd /sites/personal
+docker build -t bjackson/personal .
+
+docker run -p 9000:9000 -d \
+    --name personal \
+    bjackson/personal
