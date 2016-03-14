@@ -1,4 +1,4 @@
-FROM node:origin
+FROM node:5.8.0
 
 RUN mkdir /var/site
 
@@ -12,6 +12,6 @@ RUN npm install -g forever
 
 COPY . /var/site
 
-EXPOSE 3000
+EXPOSE 9000
 
 CMD ["forever", "restart", "/var/site/index.js", "||", "forever", "start", "/var/site/index.js"]
