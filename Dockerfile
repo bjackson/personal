@@ -2,11 +2,11 @@ FROM node:5.8.0
 
 RUN mkdir -p /site
 
+COPY package.json /site
+
 WORKDIR /site
 
 # COPY . /site
-
-COPY package.json /site
 
 RUN npm install
 
