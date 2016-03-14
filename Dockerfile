@@ -1,6 +1,6 @@
 FROM node:5.8.0
 
-RUN mkdir /site
+RUN mkdir -p /site
 
 WORKDIR /site
 
