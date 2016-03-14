@@ -14,4 +14,4 @@ RUN npm install -g forever
 
 EXPOSE 9000
 
-CMD ["forever restart /site/index.js || forever start /site/index.js"]
+CMD ["forever restart index.js || forever start index.js"]
