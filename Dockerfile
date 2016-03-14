@@ -4,8 +4,6 @@ RUN mkdir -p /site
 
 WORKDIR /site
 
-# COPY . /site
-
 COPY package.json /site/package.json
 
 RUN npm install
