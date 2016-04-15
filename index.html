@@ -5,15 +5,38 @@
     <title>Brett Jackson</title>
     <!-- Stylesheets -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <style>
+      .img-circle {
+          border-radius: 50%;
+      }
+
+      .col-lg-4, .col-lg-8 {
+          float:none;
+          display:inline-block;
+          vertical-align:middle;
+          margin-right:-4px;
+      }
+    </style>
   </head>
   <body>
     <div class='container'>
       <div class="jumbotron">
-        <h3 class="display-3">I'm Brett Jackson</h2>
-        <p class="lead">
-          I'm currently migrating my ancient website to my VPS.
-          Bear with me.
-        </p>
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="/avatar"
+              class="img-circle"
+              width="250"/>
+          </div>
+          <div class="col-lg-8">
+            <div class="vcenter">
+              <h3 class="display-3">I'm Brett Jackson</h2>
+              <!-- <p class="lead">
+                I'm currently migrating my ancient website to my VPS.
+                Bear with me.
+              </p> -->
+            </div>
+            </div>
+        </div>
       </div>
 
       <div class="row-marketing">
