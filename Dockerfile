@@ -1,4 +1,4 @@
-FROM node:5.8.0
+FROM node:6.7.0
 
 RUN mkdir -p /site
 
