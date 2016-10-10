@@ -3,8 +3,15 @@ var app = express();
 var path = require("path");
 var fs = require('fs');
 
+app.set('trust proxy', 'loopback');
+
 app.get('/', function (req, res) {
-  console.log('New visitor.');
+  let currentTime = new Date().toISOString().
+    replace(/T/, ' ').      // replace T with a space
+    replace(/\..+/, '');
+
+  console.log(`${req.ip} — ${currentTime}`);
+
   res.sendFile(path.join(__dirname, '/index.html'));
 });
 
